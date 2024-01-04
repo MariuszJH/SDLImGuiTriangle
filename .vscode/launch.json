@@ -1,0 +1,88 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "SDLImGuiTriangle (Debug) Windows",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "windows": {
+                // Adjust the path to the Debug executable (rebuild before debugging!)
+                "program": "${workspaceFolder}/Demo/SDLImGuiTriangle/buildNinjaMC/Msvc/buildOut/SDLImGui/bin/Debug/SDLImGui_d.exe"
+/*
+                "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildMake/Gnu/buildOut/SDLImGui/bin/Debug/SDLImGui_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildMake/Clang/buildOut/SDLImGui/bin/Debug/SDLImGui_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNMake/Msvc/buildOut/SDLImGui/bin/Debug/SDLImGui_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNinja/Gnu/buildOut/SDLImGui/bin/Debug/SDLImGui_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNinja/Clang/buildOut/SDLImGui/bin/Debug/SDLImGui_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNinja/Msvc/buildOut/SDLImGui/bin/Debug/SDLImGui_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNinjaMC/Gnu/buildOut/SDLImGui/bin/Debug/SDLImGui_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNinjaMC/Clang/buildOut/SDLImGui/bin/Debug/SDLImGui_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNinjaMC/Msvc/buildOut/SDLImGui/bin/Debug/SDLImGui_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildVS/x32/Msvc/buildOut/SDLImGui/bin/Debug/SDLImGui_d.exe"
+                "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildVS/x64/Msvc/buildOut/SDLImGui/bin/Debug/SDLImGui_d.exe"
+*/
+            },
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "SDLImGuiTriangle (Debug) Linux/Mac",
+            "type": "cppdbg",
+            "request": "launch",
+            // Adjust the path to the Debug executable (rebuild before debugging!)
+            "linux": {
+                "program": "${workspaceFolder}/Demo/SDLImGuiTriangle/buildNinjaMC/Gnu/buildOut/SDLImGui/bin/Debug/SDLImGui_d"
+            },
+            "osx": {
+                "program": "${workspaceFolder}/Demo/SDLImGuiTriangle/buildNinjaMC/Clang/buildOut/SDLImGui/bin/Debug/SDLImGui_d"
+            },
+/*
+            "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildMake/Gnu/buildOut/SDLImGui/bin/Debug/SDLImGui_d",
+            "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildMake/Clang/buildOut/SDLImGui/bin/Debug/SDLImGui_d",
+            "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNMake/Msvc/buildOut/SDLImGui/bin/Debug/SDLImGui_d",
+            "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNinja/Gnu/buildOut/SDLImGui/bin/Debug/SDLImGui_d",
+            "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNinja/Clang/buildOut/SDLImGui/bin/Debug/SDLImGui_d",
+            "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNinja/Msvc/buildOut/SDLImGui/bin/Debug/SDLImGui_d",
+            "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNinjaMC/Gnu/buildOut/SDLImGui/bin/Debug/SDLImGui_d",
+            "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNinjaMC/Clang/buildOut/SDLImGui/bin/Debug/SDLImGui_d",
+            "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildNinjaMC/Msvc/buildOut/SDLImGui/bin/Debug/SDLImGui_d",
+            "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildVS/x32/Msvc/buildOut/SDLImGui/bin/Debug/SDLImGui_d",
+            "program": "${workspaceFolder}/Cpp/Demo/SDLImGuiTriangle/buildVS/x64/Msvc/buildOut/SDLImGui/bin/Debug/SDLImGui_d",
+*/
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
