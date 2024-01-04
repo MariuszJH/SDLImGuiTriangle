@@ -2,6 +2,7 @@
 Either find preinstaled SDL2 package, or if it's absent, fetch it from github
 #]=========================]
 set(packageName SDL2)
+set(packageVersion 2.28.5)
 
 #[=========================[
 Point the path to ${packageName}Config.cmake or ${packageName}-config.cmake
@@ -9,13 +10,13 @@ if the package is not on the standard search path nor in CMAKE_INSTALL_PREFIX
 #]=========================]
 if (WIN32)
     set(${packageName}_DIR C:/Packages/SDL2-2.28.3/cmake)
-    set(packageVersion 2.28.3)
+    # set(packageVersion 2.28.3)
 elseif(LINUX)
     set(${packageName}_DIR /usr/lib64/cmake/SDL2)
-    set(packageVersion 2.26.3)
+    # set(packageVersion 2.26.3)
 elseif(APPLE)
     set(${packageName}_DIR /opt/local/lib/cmake/SDL2)
-    set(packageVersion 2.28.0)
+    # set(packageVersion 2.28.0)
 elseif(UNIX AND NOT APPLE)
     set(${packageName}_DIR )
 endif()
